@@ -1,0 +1,5 @@
+
+
+//1) ek to yaad rkhna jb b koe variable ke value change krne ho without refresh than use concept of render /its not refresh
+//..and for render i use prop called /webhook called~usestate and  useffect for some value i need to change after usestate/
+//..props takes effect

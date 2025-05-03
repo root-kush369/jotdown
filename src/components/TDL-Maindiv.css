@@ -1,0 +1,24 @@
+.bg-main
+{
+    /* max-height: 96100px; */
+    /* height: 100vh; */
+    /* height: 100vh; */
+    /* width: 1440px; */
+    /* height: auto; */
+    /* height: 100vh; */
+    margin: 0 auto;
+    background-color: #282c34;
+    border: 7px solid rgb(234, 140, 33);
+    display: flex;
+    background-color: pink;
+    flex-direction: column;
+    min-height: 100vh;  /*for grwoing we use min-height remember*/
+    /* justify-content: end; */
+    /* align-items: center; */
+    /* overflow-x:hidden ; */
+    /* overflow-y: hidden; */
+    
+
+}
+
+

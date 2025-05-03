@@ -1,15 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import TDL_mainbox from './components/tdl-mainbox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+   
+  //  1
+
+  <div>
+   <div className="App">
+   
+
+  
+   {/* 2 */}
+      {/* <header className="App-header"> */}
+        
+        {/* 3 */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        
+        {/* 4 */}
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
+        </p> */}
+        
+        {/* 5 */}
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
@@ -17,8 +32,18 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+       */}
+      {/* </header> */}
+    
     </div>
+
+          <div>
+
+      <TDL_mainbox></TDL_mainbox>
+      </div>
+
+          </div>
+
   );
 }
 
