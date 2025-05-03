@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import TDL_mainbox from './components/tdl-mainbox';
+import TdlMainbox from './components/tdl-mainbox';
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
 
           <div>
 
-      <TDL_mainbox></TDL_mainbox>
+      <TdlMainbox> </TdlMainbox>
       </div>
 
           </div>

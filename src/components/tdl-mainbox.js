@@ -56,7 +56,7 @@ import mb13 from "../assets/mb13.jpg";
 
 
 
-function TDL_mainbox(){
+function TdlMainbox(){
 
 
 
@@ -93,8 +93,8 @@ let dropDownModalAg={};
 
 let div_covering_Button={};
 let  div_covering_ButtonAg={};
-var bool=0;
-let Taskcounter=0;
+// var bool=0;
+// let Taskcounter=0;
 let markboxAndContent_Parent={};
 
 let modalStyle_Update_Task={};
@@ -201,7 +201,7 @@ useEffect(function () {
 
 
 const [isLoading, setIsLoading] = useState(true);
-const [isLoadingText , setisLoadingText]=useState(true);
+// const [isLoadingText , setisLoadingText]=useState(true);
 
 // const [isLoading, setIsLoading] = useState(true);
 
@@ -209,7 +209,7 @@ useEffect(() => {
   const timer = 
   setTimeout(() => {
     setIsLoading(false);
-    setisLoadingText(false); //need nahi h iske waise
+    // setisLoadingText(false); //need nahi h iske waise
 
   }, 3000); // 3-second delay
 
@@ -274,12 +274,12 @@ const loaderAnimation = `
     }
   }
 `;
-let backGroundOFStyleTag_STYLE=
-{
-    backgroundColor:"red",
-    height:"100vh",
-    width:"100vw",
-}
+// let backGroundOFStyleTag_STYLE=
+// {
+    // backgroundColor:"red",
+    // height:"100vh",
+    // width:"100vw",
+// }
 
 // Inject keyframes into the document (only once)
 //added animation explicitly after render using useeffect
@@ -287,9 +287,9 @@ let backGroundOFStyleTag_STYLE=
 //created new element here style and added animation inside it
 useEffect(() => {
     const styleTag = document.createElement('style');
-    const backGroundOFStyleTag=document.createElement("div");
-    backGroundOFStyleTag.innerHTML=backGroundOFStyleTag_STYLE;
-    styleTag.append(backGroundOFStyleTag);
+    // const backGroundOFStyleTag=document.createElement("div");
+    // backGroundOFStyleTag.innerHTML=backGroundOFStyleTag_STYLE;
+    // styleTag.append(backGroundOFStyleTag);
 
     styleTag.innerHTML = loaderAnimation;
     document.head.appendChild(styleTag);
@@ -297,7 +297,7 @@ useEffect(() => {
     return () => {
       document.head.removeChild(styleTag); // Cleanup on unmount
     };
-  }, []); 
+  }, [loaderAnimation]); 
 
 // useEffect( function() {
 //     const backGroundOFStyleTag=document.createElement("div");
@@ -540,7 +540,8 @@ useEffect(function ()  {
 
 
 
-const[datehu ,setdate]=useState("");
+// const[datehu ,setdate]=useState("");
+const[,setdate]=useState("");
 const[editingIndex , SeteditingIndex] = useState(null); //used here for update task  + emt function mai use hua
 //to know specific index and than by todo[index].text se mai input ke jgaah pr text bhej paunff
 
@@ -564,7 +565,8 @@ const[aagyivalueUpdateTask, setvalueinputUpdateTask]=useState("");
 
 
 //i wrote css styling with usestate so i can change it later on render/means not refresh but change in value
-const [task_dynamic , set_task_dynamic]= useState(
+// const [task_dynamic , set_task_dynamic]= useState(
+    const [task_dynamic ]= useState(
 {
 
         // minHeight:"120px",
@@ -592,14 +594,15 @@ const [task_dynamic , set_task_dynamic]= useState(
 // let datekeStyling={}; //if i want to do style datekeStyling without rendering
 
 
-const [datekeStyling , setdatekeStyling]=useState(  ////if i want to do style datekeStyling with rendering
+// const [datekeStyling , setdatekeStyling]=useState(  ////if i want to do style datekeStyling with rendering
+    const [datekeStyling  ]=useState(  ////if i want to do style datekeStyling with rendering
 {    
     fontSize: isMobile?"10px":"14px",
     color:"green",
     fontWeight:isMobile?"600":"700",
     // left:isMobile?"598px":"38px",
     alignSelf:"start",
-    display:"block",
+    // display:"block",
     backgroundColor:"white",
     display:"block",
     // display:"block",
@@ -615,8 +618,8 @@ const [datekeStyling , setdatekeStyling]=useState(  ////if i want to do style da
 
 
 
-const[t_o_m_Headings ,SETtop_of_modal_Heading]=useState("Add-To-DO")
-const[add_taskANDupdateTaskkaChange ,SETadd_taskANDupdateTaskkaChange]=useState("Add Task")
+// const[t_o_m_Headings ,SETtop_of_modal_Heading]=useState("Add-To-DO")
+// const[add_taskANDupdateTaskkaChange ,SETadd_taskANDupdateTaskkaChange]=useState("Add Task")
 
 
 // console.log("bhaar aagyivalue: ",aagyivalue); TRACKING MECHANISM PROF V.DAGA
@@ -664,7 +667,7 @@ function add_task_funcN(index)
 
         
           setValueInput(""); 
-          set_to_do ( [ ... to_do ,newTask] ); //Note~> to_do ab array hai naki single variable
+          set_to_do ( [ ...to_do ,newTask] ); //Note~> to_do ab array hai naki single variable
 
                
 //.........................................................................................................................................................                                    
@@ -854,7 +857,7 @@ set_to_do (
                     // if (formalParameter.text === fparameter ){  //works but suppose everydat task is yoga
                         return {
 
-                            ... formalParameter , //mtlb to_do array ke andr newtask object display krega ye wo 3 values above bcoz wo sb array ke form m store thee 
+                            ...formalParameter , //mtlb to_do array ke andr newtask object display krega ye wo 3 values above bcoz wo sb array ke form m store thee 
                                                                                 //..its like adding new array on new  existing/same array /array is object so adding object back to function
 
                             Checked : !(formalParameter.Checked ), //now uske saath mai check uncheck value b paas krra hu
@@ -874,33 +877,41 @@ set_to_do (
 }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
-function  Delete_Middle_Text(index)
-{   
+// function  Delete_Middle_Text(index)
+// {   
 
 
 
-    set_to_do(to_do.filter (function (formalParameter , i )  {
-                    if (i!==index)
-                    {
+//     set_to_do(to_do.filter (function (formalParameter , i )  {
+//                     if (i!==index)
+//                     {
 
                         
-                        // return {
-                        //     ... formalParameter ,
-                        //     dlt_btn : !formalParameter.dlt_btn
-                        // }
-                        console.log("to_do after delete :" , to_do)
-                        return i!==index;
-                        // return index(i) ;
-                    }
-                }
-        )
-)
+//                         // return {
+//                         //     ... formalParameter ,
+//                         //     dlt_btn : !formalParameter.dlt_btn
+//                         // }
+//                         console.log("to_do after delete :" , to_do)
+//                         return i!==index;
+//                         // return index(i) ;
+//                     }
+//                     return i!==index;
+//                 }
+//         )
+// )
+// }
+
+function Delete_Middle_Text(index) {
+    set_to_do(to_do.filter(function (formalParameter, i) {
+        console.log("to_do after delete :", to_do);
+        return i !== index; // Explicit return
+    }));
+}
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 
         
-}
 const [updateTaskStatus , setupdateTaskStatus]=useState("InComplete");
 
 // let overlay_for_Modal_Update_Task={};
@@ -1038,10 +1049,10 @@ let editImg =
 // here tags declaration in react
 
 let taskContent; //declaration of variable
-let markBox; //declaration of variable
-let FinalDate;  //declaration of variable
-let final_task;
-let todoInitial;
+// let markBox; //declaration of variable
+// let FinalDate;  //declaration of variable
+// let final_task;
+// let todoInitial;
 let filteredTask= to_do; //filtered task became array here 
 
 //........................................................................................................................................
@@ -1074,12 +1085,12 @@ else { //means after initial state
     // markBox =   <input type="checkbox" style={mark_box_styling} /> 
     
     
-                if (taskContent != "") //means task ke andr kuch aagya leekh ke than kyaa daalna ye stage no todos ke baad after add task button click pr aayege 
+                if (taskContent !=="") //means task ke andr kuch aagya leekh ke than kyaa daalna ye stage no todos ke baad after add task button click pr aayege 
                 {
                         
 
 
-                    if (filterType=== "Completed" )
+                    if (filterType === "Completed" )
                     {
                         
     
@@ -1144,14 +1155,14 @@ else { //means after initial state
                                                     onClick={() => Delete_Middle_Text(index)} >
 
                                                     {/* <img src={dlt} style={deleteImg} /> */}
-                                                    <img src={"/dlt.png"} style={deleteImg} />
+                                                    <img src={"/dlt.png"} style={deleteImg}  alt="preload" />
                                                 </button>
                                                 
                                                     {/* 3.2 */}
                                                 
                                                 <button style={editBtn} onClick={() => emt(index)}>
                                                     {/* <img src={edit} style={editImg} /> */}
-                                                    <img src={"/edit.png"} style={editImg} />
+                                                    <img src={"/edit.png"} style={editImg} alt="preload" />
                                                 </button>
                                             
                                             </div>
@@ -1163,7 +1174,7 @@ else { //means after initial state
                             }
                     }
 
-                    else if (filterType=== "InComplete")
+                    else if (filterType === "InComplete")
                         {
 
         
@@ -1234,14 +1245,14 @@ else { //means after initial state
                                                         onClick={() => Delete_Middle_Text(index)} >
     
                                                         {/* <img src={dlt} style={deleteImg} /> */}
-                                                        <img src={"/dlt.png"} style={deleteImg} />
+                                                        <img src={"/dlt.png"} style={deleteImg} alt="preload" />
                                                     </button>
                                                     
                                                         {/* 3.2 */}
                                                     
                                                     <button style={editBtn} onClick={() => emt(index)}>
                                                         {/* <img src={edit} style={editImg} /> */}
-                                                        <img src={"/edit.png"} style={editImg} />
+                                                        <img src={"/edit.png"} style={editImg } alt="preload" />
                                                     </button>
                                                 
                                                 </div>
@@ -1255,7 +1266,7 @@ else { //means after initial state
                         
                         
 
-                        else if (filterType ==="ALL" )
+                        else if (filterType === "ALL" )
                             {
                                 
                                 
@@ -1311,13 +1322,13 @@ else { //means after initial state
                                                     onClick={() => Delete_Middle_Text(index)} >
 
                                                     {/* <img src={dlt} style={deleteImg} /> */}
-                                                    <img src={"/dlt.png"} style={deleteImg} />
+                                                    <img src={"/dlt.png"} style={deleteImg} alt="preload" />
                                                 </button>
                                                 
                                                     {/* 3.2 */}
                                                 
                                                 <button style={editBtn} onClick={() => emt(index)}>
-                                                <img src={"/edit.png"} style={editImg} />
+                                                <img src={"/edit.png"} style={editImg} alt="preload" />
                                                 </button>
                                             
                                             </div>
@@ -1356,22 +1367,22 @@ function dropDownFunction(event){
 const [ThemePhoto , setThemePhoto]=useState(isMobile ? mb10 : am2);
 function changePhoto(event)
 {
-    if (event.target.value == "AnimeOne")
+    if (event.target.value === "AnimeOne")
         {
             // console.log("am2");
             isMobile ? setThemePhoto(mb1) : setThemePhoto(am1);
         }
-    else if (event.target.value == "AnimeTwo")
+    else if (event.target.value === "AnimeTwo")
     {
         // console.log("am");
         isMobile ? setThemePhoto(mb2) : setThemePhoto(am2);
     }
-    else if (event.target.value == "AnimeThree")
+    else if (event.target.value === "AnimeThree")
     {
         // console.log("am3");
        isMobile ? setThemePhoto(mb3) :  setThemePhoto(am3);
     }
-    else if (event.target.value == "AnimeFourth")
+    else if (event.target.value === "AnimeFourth")
     {
         console.log("AnimeArt");
         // setThemePhoto(AnimeArt);
@@ -1379,14 +1390,14 @@ function changePhoto(event)
         isMobile ? setThemePhoto(mb4) : setThemePhoto(AnimeArt);
     }
 
-    else if (event.target.value == "AnimeFive")
+    else if (event.target.value === "AnimeFive")
         {
             // console.log("AnimeArt");
             setThemePhoto(mb5);
             
             // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
         }
-        else if (event.target.value == "AnimeSix")
+        else if (event.target.value === "AnimeSix")
             {
                 // console.log("AnimeArt");
                 // setThemePhoto(AnimeArt);
@@ -1394,7 +1405,7 @@ function changePhoto(event)
                 
                 // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
             }
-            else if (event.target.value == "AnimeSeven")
+            else if (event.target.value === "AnimeSeven")
                 {
                     // console.log("AnimeArt");
                     // setThemePhoto(AnimeArt);
@@ -1402,14 +1413,14 @@ function changePhoto(event)
                     
                     // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
                 }
-                else if (event.target.value == "AnimeEight")
+                else if (event.target.value === "AnimeEight")
                     {
                         // console.log("AnimeArt");
                         // setThemePhoto(AnimeArt);
                         setThemePhoto(mb8)
                         // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
                     }
-                    else if (event.target.value == "AnimeNine")
+                    else if (event.target.value === "AnimeNine")
                         {
                             // console.log("AnimeArt");
                             // setThemePhoto(AnimeArt);
@@ -1417,7 +1428,7 @@ function changePhoto(event)
                             
                             // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
                         }
-                        else if (event.target.value == "AnimeTen")
+                        else if (event.target.value === "AnimeTen")
                             {
                                 // console.log("AnimeArt");
                                 // setThemePhoto(AnimeArt);
@@ -1425,14 +1436,14 @@ function changePhoto(event)
                                 
                                 // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
                             }
-                            else if (event.target.value == "AnimeEleven")
+                            else if (event.target.value === "AnimeEleven")
                                 {
                                     // console.log("AnimeArt");
                                     // setThemePhoto(AnimeArt);
                                     setThemePhoto(mb11)
                                     // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
                                 }
-                                else if (event.target.value == "AnimeTwelve")
+                                else if (event.target.value === "AnimeTwelve")
                                     {
                                         // console.log("AnimeArt");
                                         // setThemePhoto(AnimeArt);
@@ -1440,7 +1451,7 @@ function changePhoto(event)
                                         
                                         // isMobile ? setThemePhoto(mb2) : setThemePhoto(AnimeArt);
                                     }
-                                    else if (event.target.value == "AnimeThirteen")
+                                    else if (event.target.value === "AnimeThirteen")
                                         {
                                             // console.log("AnimeArt");
                                             // setThemePhoto(AnimeArt);
@@ -1813,7 +1824,7 @@ else
                                     
                                         <div id="closeimg-div">
                                             {/* <img  id="crossimg" src=  {close}       onClick={closeModal}  /> */}
-                                            <img  id="crossimg" src=  {"/close.png"}       onClick={closeModal}  />
+                                            <img  id="crossimg" src=  {"/close.png"}       onClick={closeModal} alt="preload"  />
                                         </div>
                         </div>
                     </div>
@@ -1916,7 +1927,7 @@ else
             
             <div id="closeimg-div">
             {/* <img  id="crossimg" src=  {close}       onClick={closeModalUpdateTask}  /> */}
-            <img  id="crossimg" src=  {"/close.png"}       onClick={closeModalUpdateTask}  />
+            <img  id="crossimg" src=  {"/close.png"}       onClick={closeModalUpdateTask}  alt="preload" />
             </div>
             </div>
     </div>
@@ -1999,7 +2010,7 @@ else
     //  );
 }
 
-export default TDL_mainbox;
+export default TdlMainbox;
 
 
 
