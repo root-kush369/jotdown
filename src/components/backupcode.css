@@ -1,0 +1,1289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x:hidden ; is se sb hide hojayea overflow even in child boxes pr koe concept lgaya ho maine */
+}
+
+
+.top-head-K{
+    height: 6px;
+    width: 1px;
+    color: black;
+    position: relative;
+    top: 2px;
+  }
+
+.dropDown
+{
+    width: 120px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dropdownOption
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.add-task-Button
+{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.4rem;
+    cursor: pointer;
+
+    /* was findingshort hand property for justifycontent and align-items */
+    /* justify-content: center; */
+    /* align-content: center; */
+}
+
+.add-task-Button p
+{
+    font-size: 17px;
+    font-weight: 700;
+
+}
+
+/* .parentX */
+/* { */
+    /* height: 100%; */
+    /* background-color: purple; */
+/* } */
+.workArea-To-DO
+{
+    min-height: 90px;
+    /* height: 120px; */
+    /* height: auto; */
+    max-height: 100%;
+    width: 720px; /*same width of task-div subsyling taskdiv ke bhar ka box hai ye*/
+    /* width: auto; */
+    background: #f1ecec;
+    /* background: transparent; */
+    margin: 1.9rem auto; 
+    margin-top: 1.9rem;
+    /* position: relative; */
+    /* left: 180px; */
+    /* top:40px; */
+    border-radius: 1.7rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 700;
+    /* overflow-x: hidden; */
+    flex-wrap: wrap;
+    /* overflow-x: hidden; */
+    /* padding: 1rem; */
+
+    padding:1.5rem;
+    height: auto;
+
+    
+}
+
+.Mid_Text
+{
+    /* background-color: gray; */
+    text-align: center;
+    border: 2px solid black;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size:32px;
+    /* margin: 12rem; */
+    /* filter: blur(1px); */
+    backdrop-filter: blur(4px);
+    background-color: rgb(244, 236, 236); /* Fallback color */
+    border-radius: 0.7rem;
+    /* background-color: rgba(0,0,0, 0.4); */
+     /* Black w/opacity/see-through */
+     /* position: relative; */
+     /* left: 20px; */
+
+  
+
+}
+/* .task_div
+{
+    font-size: 32px;
+} */
+/* .Mid-Text p */
+/* { */
+    /* font-size: 12px; */
+/* } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modal css below */
+
+
+.Modal-Div
+{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    height: 305px;
+    width: 440px;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    margin:  0 auto; /* to center in between i have to use this margin in modal */
+    margin-top: 13rem;
+    
+    animation-name : k ;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-delay: 0ms;
+    
+}
+@keyframes k
+{
+    0%
+    {
+        /* width: 10%; */
+        opacity: 0;
+    }
+    100%
+    {
+        /* width: 100%; */
+        opacity: 1;
+    }
+}
+
+
+#Modal-top-Heading
+{
+    font-size:22px;
+    font-weight: 800;
+    color: gray;
+    position: relative;
+    bottom: 20px;
+    margin: 0.7rem 0.9rem;
+}
+
+
+.Modal-Div    label
+{
+    font-size: 17px;
+    font-weight: 600;
+    color: gray;
+
+}
+.Modal-Div   input
+{
+    height: 43px;
+    border: none;
+    margin-top: 0.3rem ;
+    position: relative;
+    top: 30px;
+    /* width: 330px; */
+}
+
+/* #titleHU */
+/* { */
+    /* height: 40px; */
+    /* width: 10px; *
+    /* position: relative;
+    bottom: 2px; */
+    
+    
+/* }  */
+/* #titleinput::target-text */
+/* input[type="text"] */
+#titleinput
+{
+    font-size:23px;
+    color:black;
+    padding-left: 0.7rem;
+}
+
+#titleinput::placeholder
+{
+    /* margin-left: 91rem; */
+}
+/* #titleinput::highlight */
+{
+    
+
+}
+
+#titleinputAgain
+{
+    font-size:23px;
+    color:black;  
+    padding-left: 0.7rem;
+}
+/* { */
+    /* position: relative;
+    /* bottom: 9px; */
+    /* top: 1px; */
+    /* height: 92px; */
+    /* padding-left: 0.3rem; */
+    /* padding: 1.2rem; */
+/* } */
+/* #titleHuAgain
+{
+    position: relative;
+    bottom:2px;
+
+    
+} */
+
+
+.Modal-Div button
+{
+
+    background-color: #646ff0;
+}
+.Modal-Div button p
+{
+    font-size: 17px;
+    font-weight:600;
+    color: white;
+    /* background-color: #646ff0; */
+}
+
+
+#cancel-btn-div
+{
+    background-color: #646ff0;
+    /* color: white; */
+
+}
+#cancel-btn
+{
+    /* color: rgb(84, 84, 84); */
+    font-weight: 700;
+}
+
+
+
+.div-covering-Button{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 20px;
+}
+.div-covering-ButtonAg{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 20px;
+}
+
+.div-Button-in-Modal
+{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    margin-top: 2.8rem;
+    /* position: relative; */
+    /* top: 30px; */
+}
+
+/* .dropDownModal */
+/* { */
+    /* width: max-content; */
+
+    /* height: 72px; */
+    /* margin-top: 0.4rem; */
+    /* appearance: none; */
+    /* font-size: 19px; */
+    /* font-weight: 500; */
+    /* padding-left: 0.3rem; */
+    /* padding: 0.9rem; */
+    /* position: absolute; */
+    /* top: 10px; */
+    
+/* } */
+
+#crossimg
+{    
+    height: 30px;
+    width: 30px;
+    position: relative;
+    bottom: 299px;
+    left: 395px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 0.4rem;
+}
+#crossimg:hover
+{
+    /* background-color: rgb(255, 7, 7); */
+}
+
+
+#top_heading_todo
+{
+    text-align: center;
+    /* padding: 1.3rem; */
+    font-size: 37px;
+    font-family: 'Times New Roman', Times, serif;
+    color:whitesmoke;
+    margin: 2rem 2rem;
+    text-shadow: 1px 1px 1px black , 1px 1px 1px white;
+    /* font-weight: 700px; */
+    /* background-color: red; */
+    /* text-shadow:  1px  2px 3px rgb(231, 221, 231) , 3px 7px 13px rgb(192, 125, 125); */
+}
+
+.box-of-task-and-dropdown{
+    /* background-color: red; */
+    /* background-image: linear-gradient(rgb(246, 96, 206) , rgb(205, 171, 255)); */
+    /* background-image: radial-gradient(#4568dc , #b06ab3); */
+    /* background-image: linear-gradient( #03001e , #7303c0 , #ec38bc , #fdeff9 ); */
+    /* background-image: linear-gradient(  #a49fa1 , #f0c1f6  , #898888 ); */
+    background-image: linear-gradient(   #bdc3c7 , #5b6f84 );
+
+    height: 10px;
+    width: 720px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    padding:2.1rem;
+    border-radius:1.9rem;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* dummycode below */
+
+/* .
+ */
+/* { */
+    /* overflow-x: hidden;
+    /* overflow-y: auto; */
+    /* perspective: 30px; */
+    /* perspective: 1000px; */
+    /* min-height: 100vh; */
+     /* its height of display or view port */
+    /* width: 100vw;its width of display or view port */
+    /*this is true and checked by me height: 100%; dont work as %works relative to its immediate parent and parent is body tag which might not have width or height set or may be they have but very low*/
+    /* width: 100%; */
+    
+    
+/* } */
+
+/* . */
+/* { */
+    /* z-index: -1; */
+     /* here i need bcoz wrna niche ke text jo leekhra mae after this container wo iskae pichae chup jaarae h */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* height: 100%; */
+    /* border: 10px solid palevioletred; */
+    /* position: relative;  */
+
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center;@1 */
+    /* align-items: center; */
+    
+    
+
+
+    /* transform-style: preserve-3d; */
+    
+/* } */
+/* Add a distinct background to the body to make the blur effect noticeable */
+/* body { */
+    /* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+    /* border:17px solid yellow; */
+    /* height: 100vh; */
+    /* height: 100vw; */
+    /* width: 100vw; */
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+     /* A gradient background for the body */
+    /* min-height: 100vh; */
+    /* height: 100vh; */
+     /* Ensure the body takes up the full viewport height */
+  /* } */
+  
+
+.label_Style
+{
+    /* background-color: wheat; */
+    color: white;
+    /* background-color: black; */
+    /* margin-left: 4rem; */
+    /* position: fixed; */
+    /* margin-left: 1rem; */
+    filter: opacity(70%);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 600;
+    text-shadow: 1px 1px 7px rgb(144, 144, 139) , 2px 3px 2px rgb(91, 94, 91);
+    animation-name: themeKush;
+    animation-duration: 3s;
+    /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    animation-timing-function:linear;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    
+}
+
+  .themeDropDown
+  {
+    /* appearance:none ; */
+    height: 30px;
+    width: 190px;
+    margin-left: 1rem;
+    /* text-align: center; */
+    font-size: 17px;
+    border-radius: 0.6rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgb(164, 161, 161) , 1px 1px 1px rgb(156, 150, 150);
+    /* color: black; */
+    font-family:'Times New Roman', Times, serif;
+    filter: opacity(70%);
+  }
+  
+  
+  .themeDropDown:focus{
+    filter: opacity(70%);
+  }
+  
+
+  /* .themeDropDown  */
+  /* { */
+  /* } */
+
+  .parentOfLoaderStyleANDBgofloader
+  {
+    overflow-x:hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bgloader
+  {
+    
+    /* overflow-x: hidd   en; */
+    position:relative;
+    height:100vh;
+    width:100vw;
+    background-image: radial-gradient( #242124, #003366 );
+    /* background: hsla(154, 100%, 76%, 1); */
+
+/* background: radial-gradient(circle, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%); */
+
+/* background: -moz-radial-gradient(circle, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%); */
+
+/* background: -webkit-radial-gradient(circle, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%); */
+
+/* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#84FFC9", endColorstr="#AAB2FF", GradientType=1 ); */
+  }
+
+  .loadinglogoImg
+  {
+    height: 1150px;
+    width: 1510px;
+    position: absolute;
+    z-index: 999;
+    /* visibility: hidden; */
+  }
+
+  .loaderStyle{
+    opacity: 0; /* Hidden until loaded */
+    position: absolute;
+    /* top:100; */
+    z-index: 999;
+    
+  }
+  
+
+.loaderStyle[data-loaded="true"] {
+    opacity: 1; /* Instantly visible when loaded */
+    position: absolute;
+    /* top:100; */
+    z-index: 999;
+}
+
+.LoaderTextStyle
+{
+      position: absolute;
+      /* position: absolute; */
+      /* top:100; */
+      z-index: 2999;
+      /* bottom:0; */
+      /* z-index: 2000; */
+      /* left:0; */
+      /* top:0; */
+      /* right: 0; */
+    font-size: 63px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    /* color:whitesmoke */
+    background-image: radial-gradient(rgb(244, 241, 241),rgb(170, 236, 250),rgb(222, 151, 189));
+    border-radius: 3rem;
+
+    /* opacity: 0;  */
+    /* Hidden until loaded */
+  }
+
+
+  .ThemeBar
+  {
+    position:fixed;
+    bottom:30px;
+    left:20;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    /* border: 2px solid whitesmoke; */
+  }
+  .rightFinger
+{
+ display: none;
+}
+
+
+  @keyframes themeKush
+  {
+    0%{
+        /* background-color: red; */
+        /* transform: rotateY(0deg) translateY(0px); */
+        /* background-color: red; */
+        transform: rotate(9deg) ;
+        /* position: fixed; */
+        /* top:10px */
+        /* width: 20px; */
+    }
+    50%
+    {
+        /* background-color: blue; */
+        /* width: 40px; */
+        /* position: fixed; */
+        /* top:30px */
+        /* transform:  rotateY(180deg) translateY(-12px); */
+        transform:  rotate(-9deg) ;
+
+
+    }
+    100%{
+        /* background-color:green; */
+        /* width: 90px; */
+        /* position: fixed; */
+        /* top:70px */
+        /* transform:  rotateY(360deg) translateY(0px); */
+        transform:  rotate(9deg) ;
+
+    }
+    
+  }
+
+
+
+  .box-of-task-and-dropdownAnd-ThemeBar
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+/* responsiveness */
+
+/* @media (max-width :400px   ) and  (max-height: 2460px)  */
+@media (max-width :400px   ) 
+{
+
+
+    .Wrapper {
+        padding-top: env(safe-area-inset-top);
+      }
+    .ThemeBar
+    {
+   
+      left:1px;
+      display:flex;
+      flex-direction:row;
+      /* justify-content:space-around; */
+      /* justify-content:center; */
+      /* gap: 10px; */
+      align-items: center;
+      position: fixed;
+      /* border: 12px solid red; */
+      top:12.7rem;
+      /* left:80px; bcoz 440px ke width cut krde maine 40- 40 */
+      /* left:20%;  */
+      /*440px ka hisab lgaya*/
+      /* margin-bottom: 3rem; */
+      height: 27px;
+      width: 100%;
+      max-width: 370px;
+      /* margin-bottom: 12rem; */
+      margin: 0 auto;
+      padding: 0.5rem 0;
+      /* margin-top: rem; */
+    }
+
+    .label_Style
+    {
+        position:static;
+        /* bottom:1px; */
+        /* background-color: wheat; */
+        color: rgb(255, 255, 255)
+        /* background-color: black; */
+        /* margin-top:1rem; */
+        /* padding-top: 2rem; */
+        /* position: fixed; */
+        /* margin-left: 0.7rem; */
+        /* margin-bottom: -1.2rem; */;
+        border: 1.7px solid gray;
+        border-radius: 1.3rem;
+        filter: opacity(70%);
+        height: 20px;
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 900;
+        text-shadow: 1px 1px 3px rgb(87, 86, 86) , 1px 1px 1px rgb(39, 243, 195);
+        /* filter:drop-shadow(0 0 0.5rem rgb(220, 20, 193)); */
+        animation-name: themeKush;
+        animation-duration: 3s;
+        /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+        animation-timing-function:linear;
+        animation-delay: 0ms;
+        margin-bottom: 0.5rem; /* Space between label and dropdown */
+        animation-iteration-count: infinite;
+        
+    }
+            @keyframes themeKush
+        {
+            0%{
+                /* background-color: red; */
+                /* transform: rotateY(0deg) translateY(0px); */
+                /* background-color: red; */
+                transform: rotate(9deg) ;
+                /* position: fixed; */
+                /* top:10px */
+                /* width: 20px; */
+            }
+            50%
+            {
+                /* background-color: blue; */
+                /* width: 40px; */
+                /* position: fixed; */
+                /* top:30px */
+                /* transform:  rotateY(180deg) translateY(-12px); */
+                transform:  rotate(-9deg) ;
+
+
+            }
+            100%{
+                /* background-color:green; */
+                /* width: 90px; */
+                /* position: fixed; */
+                /* top:70px */
+                /* transform:  rotateY(360deg) translateY(0px); */
+                transform:  rotate(9deg) ;
+
+            }
+  }
+
+   .themeDropDown
+  {
+    position: static;
+    /* appearance:none ; */
+    /* position: fixed; */
+    /* position:absolute; */
+    /* right:50px; */
+    /* left:20; */
+    /* z-index: -99999; */
+    height: 23px;
+    width: 130px;
+    
+    /* margin-right: 0.7rem; */
+    /* text-align: center; */
+    font-size: 14px;
+    border-radius: 1.3rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgb(164, 161, 161) , 1px 1px 1px rgb(156, 150, 150);
+    /* color: black; */
+    font-family:'Times New Roman', Times, serif;
+    /* filter: opacity(70%); */
+    border: 1.7px solid gray;
+    /* box-sizing: border-box; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  #top_heading_todo
+{
+    text-align: center;
+    /* padding: 1.3rem; */
+    font-size: 27px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* color:whitesmoke; */
+    color:rgb(70, 66, 66);
+    margin: 2rem 2rem;
+    text-shadow: 1px 1px 1px black , 1px 1px 1px white;
+    /* align-self: flex-start; */
+    /* margin-bottom: 3rem; */
+    position: relative;
+    bottom: 2rem;
+    /* text-shadow: -10px 10px 0px #00e6e6, */
+                 /* -20px 20px 0px #01cccc, */
+                 /* -30px 30px 0px #00bdbd; */
+    
+    /* font-weight: 100px; */
+    /* background-color: red; */
+    /* text-shadow:  1px  2px 3px rgb(212, 205, 212) , 3px 7px 13px rgb(54, 48, 48); */
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    /* filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210)); */
+    filter: drop-shadow(0 0 0.75rem rgb(150, 245, 245));
+}
+
+.box-of-task-and-dropdown{
+    /* background-color: red; */
+    /* background-image: linear-gradient(rgb(246, 96, 206) , rgb(205, 171, 255)); */
+    /* background-image: radial-gradient(#4568dc , #b06ab3); */
+    /* background-image: linear-gradient( #03001e , #7303c0 , #ec38bc , #fdeff9 ); */
+    /* background-image: linear-gradient(  #a49fa1 , #f0c1f6  , #898888 ); */
+    /* background-image: linear-gradient(   #bdc3c7 , #5b6f84 ); */
+    background-image: linear-gradient(   #bdc3c7 , #95b0b8 );
+
+    height: 10px;
+    width: 330px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    padding:2.1rem;
+    border-radius:1.9rem;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: relative;
+    bottom: 2rem;
+}
+  
+.add-task-Button
+{
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: 700;
+    /* was findingshort hand property for justifycontent and align-items */
+    /* justify-content: center; */
+    /* align-content: center; */
+}
+.dropDown
+{
+    width: 90px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    border:2px solid black;
+    border-radius: 0.4rem;
+}
+.div-covering-Button{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    gap: 20px;
+}
+
+.div-Button-in-Modal
+{
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    margin-top:0.2rem;
+    /* background-color: red; */
+    /* position: relative; */
+    /* top: 30px; */
+}
+
+
+#crossimg
+{    
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 19rem;
+    left: 20.7rem;
+    cursor: pointer;
+    /* background-color: white; */
+    border-radius: 0.7rem;
+    /* transition: all linear 3s; */
+}
+#crossimg:hover
+{    
+    
+    transition: all linear 0.03s;
+    /* background-color: rgb(248, 88, 88); */
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+#Modal-top-Heading
+{
+    font-size:20px;
+    font-weight: 800;
+    color: gray;
+    position: relative;
+    bottom: 20px;
+    margin: 0.7rem -0.7rem; /*top and left*/
+    margin-bottom: 1rem;
+}
+
+
+
+#titleinput
+{
+    font-size:19px;
+    color:black;
+    padding-left: 0.7rem;
+}
+
+
+.workArea-To-DO
+{
+    /* overflow-y:scroll; */
+    /* position: sticky; */
+    position: relative;
+    min-height: 90px;
+    /* margin-top: 150px;  */
+    /* margin-top: 4rem; */
+    /* height: 120px; */
+    /* height: auto; */
+    max-height: 100%;
+    width: 370px; /*same width of task-div subsyling taskdiv ke bhar ka box hai ye*/
+    /* width: auto; */
+    background: #f1ecec;
+    /* background: transparent; */
+    margin: 1.9rem auto; 
+    margin-top: 16rem;
+    /* position: relative; */
+    /* left: 180px; */
+    /* top:40px; */
+    border-radius: 1.2rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* font-size: 23px; */
+    font-weight: 700;
+    /* overflow-x: hidden; */
+    flex-wrap: wrap;
+    /* overflow-x: hidden; */
+    /* padding: 1rem; */
+
+    padding: 0.0002rem 0.9rem;
+    height: auto;
+    border: 3px solid black;
+    z-index: 50;
+    /* box-shadow: rgb(38, 57, 77)  0px 20px 30px -10px; */
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    /* background-color: red; */
+    border-radius: 2.3rem;
+    max-width: 90vw;
+    
+
+    
+}
+
+.Mid_Text
+{
+    /* background-color: gray; */
+    text-align: center;
+    border: 2px solid gray;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size:17px;
+    /* margin: 12rem; */
+    /* filter: blur(1px); */
+    backdrop-filter: blur(4px);
+    background-color: rgb(244, 236, 236); /* Fallback color */
+    border-radius: 0.7rem;
+    /* background-color: rgba(0,0,0, 0.4); */
+     /* Black w/opacity/see-through */
+     /* position: relative; */
+     /* left: 20px; */
+
+  
+
+}
+
+.Modal-Div button
+{
+
+    background-color: #646ff0;
+    height: 41px;
+    margin-top: 0.7rem;
+    width:6rem;
+    /* padding: 0.4rem; */
+}
+.Modal-Div button p
+{
+    font-size: 14px;
+    font-weight:600;
+    color: white;
+    /* background-color: #646ff0; */
+}
+
+
+#cancel-btn-div
+{
+    background-color: #646ff0;
+    /* color: white; */
+
+}
+#cancel-btn
+{
+    /* color: rgb(84, 84, 84); */
+    font-weight: 700;
+}
+
+.rightFinger
+{
+    
+    /* border: 2px solid red; */
+    /* height: 20px; */
+    /* width: 70px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-block */
+    
+    /* ; */
+}
+.rightFinger
+{
+    height: 32px;
+    width: 42px;
+    margin-left: 1rem;
+    display: block;
+    position: static;
+    /* border: 2px solid white; */
+}
+.parentOfLoaderStyleANDBgofloader
+  {
+    overflow-x:hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bgloader
+  {
+    
+    /* overflow-x: hidd   en; */
+    position:relative;
+    height:100vh;
+    width:100vw;
+    background-image: radial-gradient( #242124, #003366 );
+    /* background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); */
+    /* background: hsla(154, 100%, 76%, 1); */
+
+/* background: radial-gradient(circle, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%); */
+
+/* background: -moz-radial-gradient(circle, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%); */
+
+/* background: -webkit-radial-gradient(circle, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%); */
+
+/* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#84FFC9", endColorstr="#AAB2FF", GradientType=1 ); */
+  }
+
+  .loadinglogoImg
+  {
+    height: 1150px;
+    width: 1510px;
+    position: absolute;
+    z-index: 999;
+    /* visibility: hidden; */
+  }
+
+  .loaderStyle{
+    opacity: 0; /* Hidden until loaded */
+    position: absolute;
+    /* top:100; */
+    z-index: 999;
+    
+  }
+  
+
+.loaderStyle[data-loaded="true"] {
+    opacity: 1; /* Instantly visible when loaded */
+    position: absolute;
+    /* top:100; */
+    z-index: 999;
+}
+
+.LoaderTextStyle
+{
+      position: absolute;
+      position: absolute;
+      /* top:100; */
+      z-index: 2999;
+      /* bottom:0; */
+      /* z-index: 2000; */
+      /* left:0; */
+      /* top:0; */
+      /* right: 0; */
+    font-size: 27px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    /* color:whitesmoke */
+    /* background-image: radial-gradient(rgb(244, 241, 241),rgb(170, 236, 250),rgb(222, 151, 189)); */
+    /* background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); */
+    /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+    /* background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%); */
+    /* background-image: linear-gradient(to right, #868f96 0%, #596164 100%); */
+    /* background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%); */
+    color: #FFFFFF;
+    background-image: radial-gradient( #444444, #0f2f4e );
+text-shadow: 0 0 10px #FFFFFF;
+    padding: 3rem;
+    /* border-radius: 3rem; */
+
+    /* opacity: 0;  */
+    /* Hidden until loaded */
+  }
+
+  .box-of-task-and-dropdownAnd-ThemeBar
+  {
+  
+    position: relative;
+
+    background: #f1ecec;
+  
+    position: fixed;
+    z-index: 100;
+    background-image: linear-gradient(#eeeaed, #a0a3a7);/* Existing gradient */
+
+    top: 0;
+
+    height: 14.9rem;
+    
+    width: 100%,;
+    max-width: 400px;
+    /* left: 5px; */
+    /* left: 0.7%; */
+    border-radius: 2.7rem;
+    /* box-shadow: 0px -25px 2px 9px rgba(71, 68, 68, 0.45), 25px 2px  20px 9px rgba(67, 67, 67, 0.45), 0px 2px 20px 9px rgba(13, 13, 13, 0.45), -25px 2px 9px rgba(0, 0, 0, 0.45); */
+    /* box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25); */
+    box-shadow: 0 2px 5px rgba(18, 18, 18, 0.7);
+    border: 1.3px solid black;
+    top: 0;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 370px; /* Match workArea-To-DO width */
+    max-width: 100%; /* Ensure it doesn’t overflow on smaller screens */
+    /* height: auto; */
+    padding: 1rem;
+  border-radius: 1.9rem;
+  margin: 0; /* Remove uneven margins */
+  
+    
+
+  }
+
+  .loaderStyle
+{
+    position: 'fixed';
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid black;
+    z-index: 100;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    /* width: '10vw', */
+    /* height: '10vh', */
+  /* //   backgroundColor: '#000', // Black background (customize as needed) */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 5s ease-in-out forwards;
+     /* // Fade out animation  */
+    opacity: 0; /* Hidden until loaded */
+  /* transition: opacity 0.3s ease; */
+   /* Smooth appearance */
+}
+
+
+.loader-logo[data-loaded="true"] {
+    opacity: 1; /* Show when loaded */
+  }
+
+  .rightFinger
+  
+  {
+    position:static;
+    /* bottom:30px; */
+    left:20;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+  }
+  /* .task {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    padding: 0.3rem;
+    font-size: 25px;
+    height: auto;
+    font-weight: 400;
+    border-radius: 1rem;
+    border: 2px solid gray;
+    margin: 2rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    z-index: -66649;
+  } */
+  .top-head-K{
+    height: 60px;
+    width: 60px;
+    color: black;
+    position: relative;
+    top: 17px;
+    margin-right: -0.3rem ;
+  }
+
+  .Modal-Div {
+    width: 23rem;
+    max-width: 90vw;
+  }
+  
+}
+
+@media  (min-width : 401px){
+  .Wrapper{
+    background-size: contain; /* Adjust to prevent stretching on large screens */
+    padding: 2rem;
+  }
+
+  .task {
+    color: yellow;
+    background-color: red;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    padding: 0.5rem;
+    font-size: 1.5rem; /* ~24px */
+    font-weight: 400;
+    border-radius: 1rem;
+    border: 2px solid gray;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (max-width: 360px) {
+    .box-of-task-and-dropdown {
+      width: 310px;
+    }
+    .workArea-To-DO {
+      width: 330px;
+      margin-top: 15rem;
+    }
+    .Modal-Div {
+      width: 20rem;
+      height: 18rem;
+    }
+    .ThemeBar {
+      width: 330px;
+      top: 12rem;
+    }
+  }
+
+/* READ ABOUT THIS IN THEME SECTION */
+/* <select className="themeDropDown" value={theme} onChange={(e) => setTheme(e.target.value)} */

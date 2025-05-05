@@ -28,6 +28,8 @@ const ASSETS_TO_CACHE = [
   "/manifest.json",// In day3.1/public/
   "/logo512.png", // In day3.1/public/
   "/letter-k.png",
+  "/static/media/open-sans-latin-600-normal.0887b7d317f32a6a0d99.woff2",
+  "/static/media/open-sans-latin-400-normal.feb0d8644aca3df9fabf.woff2",
         
 ];
 
