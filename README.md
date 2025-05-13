@@ -8,7 +8,7 @@ With this app, users can:
 - ✏️ **Jot down** their **daily routine** and tasks they plan to complete  
 - ✅ **Mark completed tasks** at the end of the day  
 - ❌ **Leave unchecked** the tasks they haven't finished
-- ⭐: **Features**
+- ⭐: **Features** <br>
 👉  *Add Task* <br>
 👉  *Update Task* <br>
 👉  *Mark Task as Completed or Not completed After Adding Task* <br>
